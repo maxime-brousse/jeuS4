@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    profil
+{% endblock %}
+
+{% block body %}
+    <nav>
+        <ul>
+            <li><a href="{{ path('app_logout') }}">déconexion</a></li>
+            <li><a href="{{ path('app_plateau') }}">page plateau</a></li>
+        </ul>
+    </nav>
+    <h1>
+        Page profil
+    </h1>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    inscription
+{% endblock %}
+{% block stylesheets %}
+    <link href="{{ asset('assets/bootstrap/css/bootstrap.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+        <h1 class="h3 mb-3 font-weight-normal">Inscription</h1>
+        {% form_theme form 'bootstrap_4_layout.html.twig' %}
+        {{ form_start(form, {'attr': {'class': 'form2'}} ) }}
+            <div class="flex">
+                {{ form_errors(form, {'attr': {'class': 'alert alert-danger'}}) }}
+                {{ form_label(form.pseudo) }}
+                {{ form_widget(form.pseudo, {'attr': {'class': 'form-control', 'placeholder':'pseudonyme'}}) }}
+                {{ form_label(form.Motdepasse.first) }}
+                {{ form_widget(form.Motdepasse.first, {'attr': {'class': 'form-control', 'placeholder':'Mot de passe'}}) }}
+                {{ form_label(form.Motdepasse.second) }}
+                {{ form_widget(form.Motdepasse.second, {'attr': {'class': 'form-control', 'placeholder':'Mot de passe'}}) }}
+                {{ form_label(form.email) }}
+                {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder':'E-mail'}}) }}
+            {{ form_end(form) }}
+            </div>
+{% endblock %}
+
+
+

@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+{% block title %}
+    accueil
+{% endblock %}
+
+{% block body %}
+    <nav>
+        <ul>
+            <li><a href="{{ path('app_login') }}">connexion</a></li>
+            <li><a href="{{ path('app_inscription') }}">inscription</a></li>
+        </ul>
+    </nav>
+    <h1>
+        Page accueil
+    </h1>
+{% endblock %}
